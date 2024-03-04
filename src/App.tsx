@@ -40,7 +40,7 @@ function App() {
     const paramsMap = WSConfig.queryParams.map(
       (value) => `${value.key}=${value.value}`
     );
-    return `${WSConfig.socketProtocol}://${WSConfig.url}/${
+    return `${WSConfig.socketProtocol}://${WSConfig.url}${
       paramsMap.length > 0 ? `?${paramsMap.join("&")}` : ""
     }`;
   };
